@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 // Base URL for the API
 //const base_url = "https://api.example.com";
-const base_url = "http://node42130-pluto.proen.app.ruk-com.cloud";
+const base_url = "http://202.151.188.100:8080";
 
 // Set the template engine
 app.set('view engine', 'ejs');
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Serve static files
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
 app.get("/", async (req, res) => {
     try {
